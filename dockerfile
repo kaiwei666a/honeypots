@@ -1,16 +1,17 @@
 
-# FROM python:3.10-slim
+FROM ubuntu:22.04
 
+RUN apt-get update && apt-get install -y python3 python3-pip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# WORKDIR /app
+WORKDIR /app
 
+COPY . .
 
-# COPY requirements.txt ./
-# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# COPY test-web.py .
+EXPOSE 2222
+EXPOSE 8186
 
-# EXPOSE 61616
-# EXPOSE 8161
+CMD ["python3", "honeypots_agent.py", "&", "bash"]
 
-# CMD ["python", "test-web.py"]

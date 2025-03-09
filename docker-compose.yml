@@ -1,0 +1,17 @@
+
+services:
+  honeypot:
+    build: .
+    image: honeypot_agent:latest
+    container_name: honeypot_agent
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    ports:
+      - "8186:8186"  
+      - "2222:2222"
+    environment:
+      - OPENAI_API_KEY="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"  
+    volumes:
+      - .:/app
+    restart: unless-stopped

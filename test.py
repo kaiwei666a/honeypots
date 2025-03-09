@@ -5,10 +5,10 @@ import time
 
 LOG_FILE = "ssh_honeypot.log"
 
-# 生成 SSH 服务器密钥
+
 HOST_KEY = paramiko.RSAKey.generate(2048)
 
-# 伪造 SSH 服务器
+
 class FakeSSHServer(paramiko.ServerInterface):
     def __init__(self, client_ip):
         self.client_ip = client_ip
@@ -23,9 +23,9 @@ class FakeSSHServer(paramiko.ServerInterface):
         print(log_message)
         with open(LOG_FILE, "a", encoding="utf-8") as log_file:
             log_file.write(log_message)
-        return paramiko.AUTH_SUCCESSFUL  # 让攻击者以为认证成功
+        return paramiko.AUTH_SUCCESSFUL 
 
-# 处理 SSH 连接
+
 def handle_ssh_connection(client, addr):
     try:
         transport = paramiko.Transport(client)
@@ -33,7 +33,7 @@ def handle_ssh_connection(client, addr):
         server = FakeSSHServer(addr[0])
         transport.start_server(server=server)
 
-        channel = transport.accept(20)  # 等待攻击者打开 shell
+        channel = transport.accept(20) 
         if channel is None:
             return
 
@@ -53,7 +53,6 @@ def handle_ssh_connection(client, addr):
     finally:
         client.close()
 
-# 监听 SSH 端口 22
 def start_ssh_honeypot():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)

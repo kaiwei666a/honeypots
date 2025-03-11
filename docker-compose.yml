@@ -11,7 +11,7 @@ services:
       - "8186:8186"  
       - "2222:2222"
     environment:
-      - OPENAI_API_KEY="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"  
+      - OPENAI_API_KEY=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  
     volumes:
       - .:/app
     restart: unless-stopped

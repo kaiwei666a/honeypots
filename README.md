@@ -23,7 +23,7 @@ git clone https://github.com/kaiwei666a/honeypots.git
 ### 2. Setup Environment Variables
 
 Need to fill in the openai environment variables. 
-If you run directly locally, enter in the terminal: $env:OPENAI_API_KEY="openai key"
+If you run directly locally, enter in the terminal:` $env:OPENAI_API_KEY="openai key"`
 If use docker deployment, please set it in the `docker-compose.yml` file.
 
 
@@ -32,7 +32,10 @@ If use docker deployment, please set it in the `docker-compose.yml` file.
 
 - Python version: 3.11
 
-- Python libraries can be installed by running `pip install -r requirements.txt`
+- Python libraries can be installed by running
+```
+  pip install -r requirements.txt
+```
 
 It is recommended to create a virtual environment before installing dependencies
 ```
@@ -49,7 +52,7 @@ WARNING: This deployment is not done in a container, so it may be dangerous. If 
 After running the code, the honeypot starts
 ```bash
 # Run honeypot
-`python honeypots/honeypots_agent.py`
+python honeypots/honeypots_agent.py
 ```
 
 
@@ -58,10 +61,10 @@ After running the code, the honeypot starts
 
 ```bash
 # Compile environment
-`docker compose build`
+docker compose build
 
 # Run environment
-`docker compose up -d`
+docker compose up -d
 ```
 
 After the test, delete the environment with the following command.
@@ -80,11 +83,11 @@ Two types of honeypots can be tested, namely ssh honeypot and http honeypot
 
 ```bash
 # Connecting to the honeypot
-`ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null user@localhost -p 2222`
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null user@localhost -p 2222
 #Please enter the password after connecting
 # After entering the password, you will enter the dialogue interface. Please use the Linux command to attack or display the file.
 #Example
-`ls `
+ls 
 #Output
 `paylist.txt  creditcard.csv  passport.pdf  documents/  photos/  scripts/`  
 
@@ -96,7 +99,7 @@ If you want to test the http honeypot, comment out the existing code in honeypot
 
 ```bash
 # Send a request to the http honeypot
-`Invoke-WebRequest -Uri "http://127.0.0.1:8186/command" -Method POST -Body "ls -la" `  #You can also directly open http://localhost:8186/ in browser or use postman
+Invoke-WebRequest -Uri "http://127.0.0.1:8186/command" -Method POST -Body "ls -la"   #You can also directly open http://localhost:8186/ in browser or use postman
 ```
 
 

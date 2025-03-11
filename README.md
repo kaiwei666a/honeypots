@@ -5,10 +5,10 @@ Honeypot-Agent is a novel LLM-driven multi-agent system that automatically deplo
 
 The Honeypot-Agent framework consists of several modules corresponding to aforementioned penetration testing stages:
 
-1. honeypot Agent
+1. Honeypot Agent
 2. Planning Agent
 3. llm_response Agent
-4. defense Agent
+4. Defense Agent
 
 
 

@@ -75,7 +75,6 @@ class CommandAnalyzer:
                 else:
                     return f"bash: {validation['error_message']}\n$ "
             
-            # 对于有效命令，使用原来的generate_response函数生成真实响应
             system_prompt = """You are a Linux shell terminal. Your response must be indistinguishable from a real shell output."""
             
             user_prompt = f"""

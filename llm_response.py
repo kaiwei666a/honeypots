@@ -30,6 +30,7 @@ def generate_response(payload):
                     "content": f"""
                                         Received: `{payload}` is a shell command. Please **strictly** mimic the real response of this command as it would appear in a genuine Linux shell environment.
 
+                                        
                                         - **Only return a valid shell command output.** Do not add explanations or extra text.
                                         - **If the command queries system information, please make up a response that looks like a real server (such as basic files contained in the server, as well as phishing files: paylist, creditcard info, passport, etc.)
                                         - **Ensure the response follows the exact format of a real shell command output.**

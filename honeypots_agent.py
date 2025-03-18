@@ -269,6 +269,7 @@ def fake_ssh_server():
                             break
                         else:
                             command_details = find_command_details(command)
+                            # print(f"command_details= {command_details}")
                             llm_reply = generate_response(command_details)
                             chan.send(f"\n{llm_reply}\r\n")
 

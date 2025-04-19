@@ -1,0 +1,86 @@
+{
+    "commands": [
+      {
+        "command": "ls -l",
+        "feedback": "total 12\n-rw-r--r-- 1 user user  123 Apr 07 10:00 file1.txt\n-rw-r--r-- 1 user user  456 Apr 07 10:05 file2.txt\ndrwxr-xr-x 2 user user 4096 Apr 07 09:50 folder"
+      },
+      {
+        "command": "cat file.txt",
+        "feedback": "This is line one of file.txt\nThis is line two of file.txt\nThis is line three of file.txt"
+      },
+      {
+        "command": "date",
+        "feedback": "Wed Apr  7 17:00:00 EDT 2025"
+      },
+      {
+        "command": "uname -a",
+        "feedback": "Linux hostname 5.10.0-8-amd64 #1 SMP Thu Apr 07 16:00:00 EDT 2025 x86_64 GNU/Linux"
+      },
+      {
+        "command": "df -h",
+        "feedback": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/sda1        50G   20G   28G  42% /\ntmpfs           2.0G     0  2.0G   0% /dev/shm"
+      },
+      {
+        "command": "ps aux | head -n 3",
+        "feedback": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot         1  0.0  0.1 169364  8208 ?        Ss   Apr07   0:05 /sbin/init\nroot         2  0.0  0.0      0     0 ?        S    Apr07   0:00 [kthreadd]"
+      },
+      {
+        "command": "grep 'error' /var/log/syslog | head -n 2",
+        "feedback": "Apr 07 16:59:58 hostname CRON[12345]: (root) CMD (some error message)\nApr 07 17:00:01 hostname kernel: [12345.678901] error: device not found"
+      },
+      {
+        "command": "tail -n 10 /var/log/syslog",
+        "feedback": "Apr 07 16:59:50 hostname systemd[1]: Starting Daily apt upgrade and clean activities...\nApr 07 16:59:55 hostname systemd[1]: Started Daily apt upgrade and clean activities."
+      },
+      {
+        "command": "echo $USER",
+        "feedback": "user"
+      },
+      {
+        "command": "whoami",
+        "feedback": "user"
+      },
+      {
+        "command": "ls -lh /var/log",
+        "feedback": "total 12M\n-rw-r--r-- 1 root root 2.3M Apr  7 09:43 syslog\n-rw-r--r-- 1 root root 5.6M Apr  7 09:42 kern.log"
+      },
+      {
+        "command": "cat /etc/secrets.env",
+        "feedback": "DB_PASSWORD=supersecret\nJWT_SECRET=abc123xyz"
+      },
+      {
+        "command": "sudo rm -rf /opt/private_data",
+        "feedback": ""  
+      },
+      {
+        "command": "ps aux | grep nginx",
+        "feedback": "root     1234  0.0  0.1 125004  3564 ?        Ss   10:00   0:00 nginx: master process /usr/sbin/nginx"
+      },
+      {
+        "command": "commnd not_real",
+        "feedback": "bash: commnd: command not found"
+      },
+      {
+        "command": "mv important.txt",
+        "feedback": "mv: missing destination file operand\nTry 'mv --help' for more information."
+      },
+      {
+        "command": "ls -z",
+        "feedback": "ls: invalid option -- 'z'\nTry 'ls --help' for more information."
+      },
+      {
+        "command": "echo 'Hello World",
+        "feedback": "bash: unexpected EOF while looking for matching `'`"
+      },
+      {
+        "command": "curl https://api.example.com/data",
+        "feedback": "bash: curl: command not found"
+      },
+      {
+        "command": "cd /root/secure",
+        "feedback": "bash: cd: /root/secure: Permission denied"
+      }
+    ]
+  }
+  
+  

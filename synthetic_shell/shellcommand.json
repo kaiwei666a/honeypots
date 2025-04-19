@@ -1,0 +1,42 @@
+[
+    {
+        "command": "ls -l /var/log",
+        "feedback": "total 2048\ndrwxr-xr-x 2 root root    4096 Oct  1 12:34 apt\n-rw-r--r-- 1 root root  123456 Oct  1 12:34 syslog\n-rw-r--r-- 1 root root  654321 Oct  1 12:34 kern.log"
+    },
+    {
+        "command": "grep 'error' /var/log/syslog",
+        "feedback": "Oct  1 12:34:56 hostname kernel: [12345.678901] error: something went wrong\nOct  1 12:35:01 hostname kernel: [12346.678901] error: another issue detected"
+    },
+    {
+        "command": "ps aux | grep apache2",
+        "feedback": "root      1234  0.0  0.1  123456  7890 ?        Ss   12:34   0:00 /usr/sbin/apache2 -k start\nwww-data  5678  0.0  0.2  234567  8901 ?        S    12:34   0:01 /usr/sbin/apache2 -k start"
+    },
+    {
+        "command": "chmod 644 /etc/ssh/ssh_keys.pub",
+        "feedback": ""
+    },
+    {
+        "command": "ping -c 4 example.com",
+        "feedback": "PING example.com (93.184.216.34) 56(84) bytes of data.\n64 bytes from 93.184.216.34: icmp_seq=1 ttl=56 time=10.5 ms\n64 bytes from 93.184.216.34: icmp_seq=2 ttl=56 time=10.6 ms\n64 bytes from 93.184.216.34: icmp_seq=3 ttl=56 time=10.7 ms\n64 bytes from 93.184.216.34: icmp_seq=4 ttl=56 time=10.8 ms\n\n--- example.com ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3003ms\nrtt min/avg/max/mdev = 10.5/10.65/10.8/0.1 ms"
+    },
+    {
+        "command": "gcc -o hello hello.c",
+        "feedback": ""
+    },
+    {
+        "command": "apt update",
+        "feedback": "Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease\nGet:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]\nFetched 114 kB in 1s (114 kB/s)\nReading package lists... Done\nBuilding dependency tree       \nReading state information... Done\nAll packages are up to date."
+    },
+    {
+        "command": "ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa",
+        "feedback": "Generating public/private rsa key pair.\nEnter passphrase (empty for no passphrase): \nEnter same passphrase again: \nYour identification has been saved in /home/user/.ssh/id_rsa\nYour public key has been saved in /home/user/.ssh/id_rsa.pub\nThe key fingerprint is:\nSHA256:abc123def456ghi789 user@hostname\nThe key's randomart image is:\n+---[RSA 2048]----+\n|      .o.        |\n|     o + .       |\n|    . = +        |\n|     + o .       |\n|    . . S        |\n|     . . .       |\n|      . .        |\n|       .         |\n|                 |\n+----[SHA256]-----+"
+    },
+    {
+        "command": "ls -z",
+        "feedback": "ls: invalid option -- 'z'\nTry 'ls --help' for more information."
+    },
+    {
+        "command": "apt-get installl vim",
+        "feedback": "E: Invalid operation installl"
+    }
+]

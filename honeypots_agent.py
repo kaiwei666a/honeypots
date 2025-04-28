@@ -499,7 +499,7 @@ import threading
 from flask import Flask, Response
 from llm_response import generate_response
 
-# ========== 基础配置 ==========
+
 BASE_DIR = os.path.dirname(__file__)
 LOG_FILE = os.path.join(BASE_DIR, "honeypot.log")
 
@@ -521,13 +521,13 @@ SERVER_KEY = paramiko.RSAKey.generate(2048)
 USERNAME = "USbank"
 HOSTNAME = "Dataset_manage"
 
-# ========== 日志记录函数 ==========
+
 def log_attack(message):
     log_entry = f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {message}"
     print(log_entry)
     logging.info(log_entry)
 
-# ========== 提示与路径 ==========
+
 def get_last_known_path():
     if not os.path.exists(LOG_FILE):
         return "~"
@@ -541,7 +541,6 @@ def get_last_known_path():
 def format_prompt(path: str) -> str:
     return f"{USERNAME}@{HOSTNAME}:{path}$ "
 
-# ========== SSH Server 定义 ==========
 class FakeSSHServer(paramiko.ServerInterface):
     def __init__(self):
         self.event = threading.Event()
@@ -565,7 +564,7 @@ class FakeSSHServer(paramiko.ServerInterface):
         log_attack("[+] Shell request accepted")
         return True
 
-# ========== 单连接处理（处理完继续等待） ==========
+
 def fake_ssh_server():
     HOST = "0.0.0.0"
     PORT = 2222

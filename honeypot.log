@@ -1,0 +1,128 @@
+2025-04-28 13:47:39,276 - [2025-04-28 13:47:39] [*] Fake SSH server started on port 2222
+2025-04-28 13:47:39,299 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8186
+ * Running on http://131.247.90.122:8186
+2025-04-28 13:47:39,299 - [33mPress CTRL+C to quit[0m
+2025-04-28 13:48:08,492 - [2025-04-28 13:48:08] [*] SSH Connection from ('127.0.0.1', 7580)
+2025-04-28 13:48:08,495 - Connected (version 2.0, client OpenSSH_for_Windows_9.5)
+2025-04-28 13:48:08,505 - Auth rejected (none).
+2025-04-28 13:48:21,461 - [2025-04-28 13:48:21] [*] Attacker entered username: user
+2025-04-28 13:48:21,463 - [2025-04-28 13:48:21] [*] Attacker entered password: sdad
+2025-04-28 13:48:21,463 - Auth granted (password).
+2025-04-28 13:48:21,464 - [2025-04-28 13:48:21] [+] Channel request 'session'
+2025-04-28 13:48:21,465 - [2025-04-28 13:48:21] [+] PTY request accepted
+2025-04-28 13:48:21,465 - [2025-04-28 13:48:21] [+] Shell request accepted
+2025-04-28 13:48:24,577 - [2025-04-28 13:48:24] [*] Attacker executed command: ls
+2025-04-28 13:48:24,577 - [2025-04-28 13:48:24] [!] SSH session error: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2025-04-28 13:48:24,578 - Socket exception: An operation was attempted on something that is not a socket (10038)
+2025-04-28 13:48:24,578 - [2025-04-28 13:48:24] [*] SSH Session closed for ('127.0.0.1', 7580)
+2025-04-28 13:48:54,402 - [2025-04-28 13:48:54] [*] Fake SSH server started on port 2222
+2025-04-28 13:48:54,417 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8186
+ * Running on http://131.247.90.122:8186
+2025-04-28 13:48:54,417 - [33mPress CTRL+C to quit[0m
+2025-04-28 13:49:12,073 - [2025-04-28 13:49:12] [*] SSH Connection from ('127.0.0.1', 7596)
+2025-04-28 13:49:12,075 - Connected (version 2.0, client OpenSSH_for_Windows_9.5)
+2025-04-28 13:49:12,116 - Auth rejected (none).
+2025-04-28 13:49:14,693 - [2025-04-28 13:49:14] [*] Attacker entered username: user
+2025-04-28 13:49:14,693 - [2025-04-28 13:49:14] [*] Attacker entered password: adfjl
+2025-04-28 13:49:14,693 - Auth granted (password).
+2025-04-28 13:49:14,694 - [2025-04-28 13:49:14] [+] Channel request 'session'
+2025-04-28 13:49:14,695 - [2025-04-28 13:49:14] [+] PTY request accepted
+2025-04-28 13:49:14,695 - [2025-04-28 13:49:14] [+] Shell request accepted
+2025-04-28 13:49:16,909 - [2025-04-28 13:49:16] [*] Attacker executed command: ls
+2025-04-28 13:49:19,654 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:19,663 - [2025-04-28 13:49:19] [LLM] Raw validation response: ```json
+{
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+```
+2025-04-28 13:49:19,663 - [2025-04-28 13:49:19] [LLM] Parsed command validation: {
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+2025-04-28 13:49:20,381 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:20,394 - [2025-04-28 13:49:20] [LLM] Generated response: Checklist  Customer_list  Paylist
+2025-04-28 13:49:28,484 - [2025-04-28 13:49:28] [*] Attacker executed command: cd Paylist
+2025-04-28 13:49:28,484 - [2025-04-28 13:49:28] [PATH] CURRENT_PATH=/Paylist
+2025-04-28 13:49:30,306 - [2025-04-28 13:49:30] [*] Attacker executed command: ls
+2025-04-28 13:49:31,340 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:31,343 - [2025-04-28 13:49:31] [LLM] Raw validation response: ```json
+{
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+```
+2025-04-28 13:49:31,343 - [2025-04-28 13:49:31] [LLM] Parsed command validation: {
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+2025-04-28 13:49:32,081 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:32,083 - [2025-04-28 13:49:32] [LLM] Generated response: Checklist  Customer_list  Paylist  Projects  Reports  Scripts
+2025-04-28 13:49:37,768 - [2025-04-28 13:49:37] [*] Attacker executed command: pes
+2025-04-28 13:49:39,323 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:39,330 - [2025-04-28 13:49:39] [LLM] Raw validation response: ```json
+{
+  "is_valid": false,
+  "error_type": "command_not_found",
+  "error_message": "The command 'pes' is not recognized as a valid command in the shell.",
+  "command_type": "basic"
+}
+```
+2025-04-28 13:49:39,331 - [2025-04-28 13:49:39] [LLM] Parsed command validation: {
+  "is_valid": false,
+  "error_type": "command_not_found",
+  "error_message": "The command 'pes' is not recognized as a valid command in the shell.",
+  "command_type": "basic"
+}
+2025-04-28 13:49:42,861 - [2025-04-28 13:49:42] [*] Attacker executed command: pwd
+2025-04-28 13:49:44,717 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:44,724 - [2025-04-28 13:49:44] [LLM] Raw validation response: ```json
+{
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+```
+2025-04-28 13:49:44,724 - [2025-04-28 13:49:44] [LLM] Parsed command validation: {
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+2025-04-28 13:49:45,330 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:49:45,334 - [2025-04-28 13:49:45] [LLM] Generated response: /home/user
+2025-04-28 13:50:15,793 - [2025-04-28 13:50:15] [*] Attacker executed command: cd ..
+2025-04-28 13:50:15,794 - [2025-04-28 13:50:15] [PATH] CURRENT_PATH=~
+2025-04-28 13:50:18,060 - [2025-04-28 13:50:18] [*] Attacker executed command: ls
+2025-04-28 13:50:20,295 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:50:20,302 - [2025-04-28 13:50:20] [LLM] Raw validation response: ```json
+{
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+```
+2025-04-28 13:50:20,302 - [2025-04-28 13:50:20] [LLM] Parsed command validation: {
+  "is_valid": true,
+  "error_type": null,
+  "error_message": null,
+  "command_type": "basic"
+}
+2025-04-28 13:50:21,708 - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-28 13:50:21,710 - [2025-04-28 13:50:21] [LLM] Generated response: Checklist  Customer_list  Paylist  Projects  Reports  Scripts  backups  notes.txt
+2025-04-28 13:50:32,447 - Disconnect (code 11): disconnected by user
+2025-04-28 13:50:32,448 - [2025-04-28 13:50:32] [*] SSH Session closed for ('127.0.0.1', 7596)

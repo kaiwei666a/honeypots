@@ -76,6 +76,8 @@ docker compose down -v
 
 
 
+
+
 ## Test
 Two types of honeypots can be tested, namely ssh honeypot and http honeypot
 
@@ -94,6 +96,9 @@ wget http://loclhost/mirai -O /tmp/mirai
 # All attacker operations will be recorded in honeypot.log, and can also be viewed at http://localhost:8186/logs
 ```
 
+![Honeypot DDos](images/Connect_attack.png)
+![Honeypot DDos](images/Honeypot_screen.png)
+
 ### http
 If you want to test the http honeypot, comment out the existing code in honeypots_agent and then run the commented-out code.
 
@@ -107,6 +112,7 @@ Invoke-WebRequest -Uri "http://127.0.0.1:8186/command" -Method POST -Body "ls -l
 ```bash
 Run python DDos_test.py
 ```
+![Honeypot DDos](images/DDos_attack.png)
 
 ### Overfitting test
 ```bash
@@ -115,6 +121,7 @@ Run python DDos_test.py
           eche 'hello world'
           cat payliat
 ```
+![Honeypot overfitting](images/overfitting.png)
 
 ## Security Evaluation
 ### Prompt injection defense

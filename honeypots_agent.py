@@ -659,11 +659,9 @@ def fake_ssh_server():
             except:
                 pass
 
-# ========== 启动 SSH Server ==========
 ssh_thread = threading.Thread(target=fake_ssh_server, daemon=True)
 ssh_thread.start()
 
-# ========== Flask Web 接口 ==========
 app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
